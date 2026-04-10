@@ -1,0 +1,24 @@
+.footer { background: var(--navy); color: rgba(255,255,255,0.8); margin-top: 80px; }
+.footer-main { padding: 60px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; }
+.footer-brand .brand-logo { font-family: var(--font-display); font-size: 28px; color: white; margin-bottom: 16px; font-weight: 700; }
+.footer-brand .brand-logo i, .footer-brand .brand-logo em { color: var(--gold); font-style: normal; }
+.footer-brand p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+.social-links { display: flex; gap: 12px; }
+.social-links a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 14px; color: rgba(255,255,255,0.7); transition: var(--transition); }
+.social-links a:hover { background: var(--gold); color: var(--navy); }
+.footer-col h4 { font-family: var(--font-display); font-size: 17px; color: white; margin-bottom: 20px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul a { color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--gold); }
+.contact-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.6); }
+.contact-list i { color: var(--gold); margin-top: 3px; width: 14px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; }
+.footer-bottom .container { display: flex; align-items: center; justify-content: space-between; }
+.footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.4); }
+.payment-icons { display: flex; gap: 16px; font-size: 28px; color: rgba(255,255,255,0.5); }
+.payment-icons i { transition: color 0.2s; }
+.payment-icons i:hover { color: var(--gold); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom .container { flex-direction: column; gap: 12px; } }

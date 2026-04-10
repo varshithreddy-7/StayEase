@@ -1,0 +1,46 @@
+.hotels-page { min-height: 100vh; padding-bottom: 60px; }
+.hotels-hero { background: var(--navy); padding: 120px 0 40px; }
+.hotels-hero h1 { font-family: var(--font-display); color: white; font-size: 38px; margin-bottom: 24px; }
+.top-search { display: flex; align-items: center; gap: 12px; background: white; border-radius: 12px; padding: 12px 20px; max-width: 560px; }
+.top-search i { color: var(--gold); }
+.top-search input { border: none; outline: none; font-size: 15px; font-family: var(--font-body); width: 100%; }
+.hotels-layout { display: grid; grid-template-columns: 280px 1fr; gap: 32px; margin-top: 40px; align-items: start; }
+/* SIDEBAR */
+.filters-panel { background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); position: sticky; top: 100px; }
+.filters-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+.filters-header h3 { font-size: 17px; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+.filters-header h3 i { color: var(--gold); }
+.clear-btn { font-size: 13px; color: var(--gold); background: none; border: none; cursor: pointer; font-weight: 600; }
+.filter-group { margin-bottom: 24px; }
+.filter-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text-mid); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.filter-group select { width: 100%; padding: 10px 12px; border: 2px solid var(--border); border-radius: 8px; font-size: 14px; font-family: var(--font-body); color: var(--text-dark); background: white; cursor: pointer; }
+.filter-group select:focus { outline: none; border-color: var(--gold); }
+.radio-group { display: flex; flex-direction: column; gap: 8px; }
+.radio-label { padding: 8px 12px; border-radius: 8px; font-size: 13px; color: var(--text-mid); cursor: pointer; transition: background 0.2s; text-transform: capitalize; border: 2px solid transparent; }
+.radio-label:hover { background: var(--cream); }
+.radio-label.active { background: #fff8e8; border-color: var(--gold); color: var(--gold-dark); font-weight: 600; }
+.radio-label input { display: none; }
+.price-range { display: flex; align-items: center; gap: 8px; }
+.price-input { flex: 1; padding: 9px 10px; border: 2px solid var(--border); border-radius: 8px; font-size: 13px; font-family: var(--font-body); }
+.price-input:focus { outline: none; border-color: var(--gold); }
+.rating-filter { display: flex; flex-direction: column; gap: 6px; }
+.rating-btn { padding: 8px 12px; border-radius: 8px; border: 2px solid var(--border); background: white; font-size: 13px; cursor: pointer; text-align: left; color: var(--text-mid); transition: var(--transition); }
+.rating-btn:hover, .rating-btn.active { border-color: var(--gold); background: #fff8e8; color: var(--gold-dark); font-weight: 600; }
+/* RESULTS */
+.results-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+.results-header p { font-size: 15px; color: var(--text-mid); font-weight: 500; }
+.active-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter-tag { background: #fff8e8; border: 1px solid var(--gold); color: var(--gold-dark); font-size: 13px; padding: 4px 10px; border-radius: 20px; display: flex; align-items: center; gap: 6px; }
+.filter-tag button { background: none; border: none; color: var(--gold-dark); cursor: pointer; font-size: 16px; line-height: 1; }
+.hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+/* SKELETON */
+.loading-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.skeleton-card { background: white; border-radius: var(--radius); overflow: hidden; }
+.sk-img { height: 220px; background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+.sk-body { padding: 18px; }
+.sk-line { height: 14px; background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; margin-bottom: 10px; }
+.sk-line.short { width: 60%; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+@media (max-width: 1200px) { .hotels-grid { grid-template-columns: repeat(2, 1fr); } .loading-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) { .hotels-layout { grid-template-columns: 1fr; } .filters-panel { position: static; } }
+@media (max-width: 600px) { .hotels-grid, .loading-grid { grid-template-columns: 1fr; } }
