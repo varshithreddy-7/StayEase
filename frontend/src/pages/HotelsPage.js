@@ -29,9 +29,7 @@ const HotelsPage = () => {
       const params = new URLSearchParams();
       Object.entries(f).forEach(([k, v]) => { if (v) params.set(k, v); });
       params.set('limit', 9);
-      const { data } = await API.get(
-  "https://stayease-backend-5wim.onrender.com/api/hotels"
-);
+      const { data } = await API.get(`/hotels?${params.toString()}`);
       setHotels(data.hotels);
       setTotal(data.total);
       setPages(data.pages);
