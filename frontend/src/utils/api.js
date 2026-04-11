@@ -1,11 +1,9 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://stayease-backend-5wim.onrender.com/api',
+  baseURL: process.env.REACT_APP_API_URL || 'https://stayease-backend-5wim.onrender.com',
   withCredentials: true,
 });
-
-
 
 // Attach token to every request
 API.interceptors.request.use((config) => {
