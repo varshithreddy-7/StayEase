@@ -19,7 +19,7 @@ const app = express();
 // Middleware
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://stayease-frontend.vercel.app"
+  "https://stayease-tawny.vercel.app"
 ];
 
 app.use(cors({
